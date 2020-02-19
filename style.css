@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #FF004D;
+    animation: background 14s infinite alternate;
+    background-image: url(Images/bg.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+}
+
+@keyframes background {
+    50% {
+        background: #FF006F;
+        background-image: url(Images/bg.png);
+        background-attachment: fixed;
+        background-size: cover;
+    }
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 50%;
+    float: left;
+    height: 70px;
+
+}
+
+li {
+    color: #FF006F;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    position: relative;
+    display: block;
+    font-size: 36px;
+    list-style-type: none;
+    float: left;
+    left: -50%;
+    padding: 20px;
+    height: 70px;
+    margin: auto;
+}
+
+header {
+    margin: 0;
+    width: 100%;
+    height: 70px;
+    background: #000;
+}
+
+footer {
+    margin: 0;
+    width: 100%;
+    height: 60px;
+    background: #000;
+    color: #fff;
+    font-family: 'Saira Semi Condensed', sans-serif;
+    text-align: center;
+}
+
+a {
+
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff8130;
+    transition: 0.3s;
+}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+.line {
+    font-size: 4rem;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    position: absolute;
+    color: #fff;
+    left: 2.5rem;
+    top: 5rem;
+    opacity: 0;
+    display: block;
+    animation: slidein 1s ease-out forwards;
+}
+
+.line1 {
+    font-size: 3rem;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    position: absolute;
+    color: #fff;
+    left: 2.5rem;
+    top: 10rem;
+    opacity: 0;
+    display: block;
+    animation: slidein1 1s ease-out forwards;
+}
+
+@keyframes slidein {
+    0% {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(50px);
+    }
+}
+
+@keyframes slidein1 {
+    0% {
+        opacity: 0;
+        transform: translateY(0px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(50px);
+    }
+}
+
+.info {
+    font-family: 'Yanone Kaffeesatz', monospace;
+    font-size: 30px;
+    margin-top: 30%;
+    color: white;
+}
+
+.content {
+    margin-right: 3%;
+    margin-left: 3%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 70px;
+}
+
+.fixed {
+    height: 100vh;
+}
+
+.prodimg {
+    display: flex;
+    align-content: flex-start;
+}
+
+.proddsc {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Saira Semi Condensed', sans-serif;
+    font-size: 24px;
+    color: #fff;
+
+}
+
+.proddsc h3 {
+    font-size: 24px;
+    margin: 0 0 10px;
+}
+
+.proddsc h4{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.proddsc p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px
+}
+.prodh1 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 44px;
+    text-align: center;
+    color: #fff;
+}
+
+.prodimg img {
+    width: 250px;
+    height: 250px;
+}
+
+.row {
+    display: flex;
+}
+
+.button {
+    line-height: 1.4;
+    font-family: 'Saira Semi Condensed', sans-serif;
+    box-sizing: border-box;
+    justify-content: flex-start
+    transition: all 0.2s ease;
+    padding: .6em 1.4em;
+    text-decoration: none;
+    min-width: 10em;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+    margin: 0 auto;
+    text-transform: uppercase;
+    border: 0;
+    background: #000;
+    color: #fff;
+    float: left;
+}
+.button:hover{
+    background: #05EE91;
+    color: #000;
+}
+
+hr{
+    color: #cbcbcb;
+    background-color: #cbcbcb;
+    height: 1px;
+    border-top: 0px;
+}
+.bigprodimg{
+    display: flex;
+    align-content: flex-start;
+}
+.bigprodimg img {
+    width: 500px;
+    height: 500px;
+}
+.bigproddsc{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Saira Semi Condensed', sans-serif;
+    font-size: 30px;
+    color: #fff;
+}
