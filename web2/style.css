@@ -46,11 +46,11 @@ src: url("Fonts/OpenSans-Light.ttf");
     align-items: center;
     justify-content: space-around;
     border-bottom: 1px solid #999;
-    transition: 0.3s ease 0s;
+    transition: 0.1s ease 0s;
 }
 .solid{
     background: #fff;
-    transition: 0.5s ease 0s;
+    transition: 0.4s ease 0s;
     border: none;
 }
 
@@ -61,6 +61,9 @@ a{
     text-decoration: none;
     color: #fff;
 }
+.navbarmenu {
+    display: flex;
+}
 .navbarmenu a{
     font-family: 'Lovelo',sans-serif;
     font-size: 14px;
@@ -68,8 +71,135 @@ a{
     margin: 10px;
 }
 .navbarmenu a:hover{
-    color: #ea2839;
+    color: #fff;
     transition: 0.5s;
+}
+.navbarmenu>a:first-child{
+    color: #fff;
+}
+.solid a:first-child{
+    color: #ea2839;
+}
+.solid a:hover{
+    color: #ea2839;
+}
+.navbarmenu>a{
+    line-height: 60px;
+}
+.gamesmenu{
+    width: 80%;
+    height: 250px;
+    margin-left: -55%;
+    margin-top: 4.5%;
+    background: #fff;
+    position: absolute; 
+    z-index: 10;
+    display: none;
+} 
+.gamesmenubutton:hover + .gamesmenu {
+    display: flex;
+}
+.gamesmenu:hover{
+    display: flex;
+}
+.games{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-left: 40px;
+}
+.games a{
+    font-family: 'OpenSans', sans-serif;
+    font-size: 12px;
+    line-height: 26px;
+    margin: 0;
+    padding-left: 10px;
+    transition: 1s;
+    animation: slidein 0.5s ease-out forwards;
+}
+.games a:first-child{
+    font-family: 'Lovelo', sans-serif;
+    font-size: 12px;
+    color: #1c1c1c;
+    margin: 30px 0 10px 0;
+}
+.games a:hover{
+    background: #ea2839;
+    transition: 0s;
+}
+.games a:first-child:hover{
+    background: transparent;
+    color: #ea2839;
+}
+.campaigns{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 0 40px;
+}
+.campaigns a{
+    font-family: 'OpenSans', sans-serif;
+    font-size: 12px;
+    line-height: 26px;
+    margin: 0;
+    padding-left: 10px;
+    transition: 1s;
+    animation: slidein 0.5s ease-out forwards;
+}
+.campaigns a:first-child{
+    font-family: 'Lovelo', sans-serif;
+    font-size: 12px;
+    color: #1c1c1c;
+    margin: 30px 0 10px 0;
+}
+.campaigns a:hover{
+    background: #ea2839;
+    transition: 0s;
+}
+.campaigns a:first-child:hover{
+    background: transparent;
+    color: #ea2839;
+}
+.aboutmenu{
+    width: 16%;
+    height: 60px;
+    margin-left: 13%;
+    margin-top: 4.5%;
+    background: #fff;
+    position: absolute; 
+    z-index: 10;
+    display: none;
+}
+.aboutmenu a{
+    width: 100%;
+    font-family: 'OpenSans',sans-serif;
+    font-size: 12px;
+    color: #999;
+    padding: 10px 20px;
+    transition: 1s;
+    animation: slidein 0.5s ease-out forwards;
+}
+.aboutmenu a:hover{
+    background: #ea2839;
+    color: #fff;
+    transition: 0s;
+}
+.aboutmenubutton:hover + .aboutmenu {
+    display: flex;
+}
+.aboutmenu:hover{
+    display: flex;
+}
+@keyframes slidein {
+    0% {
+        opacity: 0.5;
+        transform: translateY(10px);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 .row{
     width: 100%;
@@ -354,6 +484,10 @@ a{
         .feed p{
         font-size: 10px;
     }
+        .rowcol{
+        padding: 30px 30px;
+        font-size: 14px;
+    }
 }
 @media screen and (max-width:769px){
     .abouttext{
@@ -366,8 +500,56 @@ a{
         margin-left: 40px;
     }
     .rowcol{
-        padding: 30px 30px;
-        font-size: 14px;
+        padding: 10px 20px;
+        height: 275px;
+    }
+    .rowcol h2{
+        font-size: 16px;
+    }
+    .rowcol p{
+        margin-bottom: 10px;
+    }
+
+}
+@media screen and (max-width:600px){
+    .navbar div > a{
+        display: none;
+    }
+    .button{
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+    .slider-wrapper{
+        max-height: 250px;
+        width: 100vw;
+    }
+    .rowcol{
+        height: 300px;
+    }
+    .rowcol p{
+        font-size: 12px;
+    }
+    .feed{
+        flex-direction: column;
+        height: 100%;
+        padding-right: 0;
+    }
+    .feed h3{
+        max-width: 94%;
+    }
+    .feed p{
+        max-width: 90%;
+        position: relative;
+        margin-bottom: 20px;
+    }
+        .abouttext{
+        width: 100%;
+    }
+    .social{
+        height: 100%;
+    }
+    .abouttext p{
+        font-size: 12px;
     }
 }
 @media screen and (max-width:415px){
@@ -376,20 +558,17 @@ a{
     }
     .slider-wrapper{
         max-height: 200px;
-        width: 100vw;
     }
     .row{
         flex-direction: column;
         margin:0;
     }
     .rowcol{
-        width: calc(100% - 60px);
+        width: calc(100% - 40px);
+        height: 200px;
     }
     .navbar{
         width: 100vw;
-    }
-    .feed{
-        display: none;
     }
     .gamestiles{
         flex-direction: column;
@@ -400,7 +579,6 @@ a{
     }
     
     .social{
-        height: 100%;
         flex-direction: column;
     }
     .twitter{
@@ -410,15 +588,15 @@ a{
     .twitter p{
         margin: 20px 20px;
     }
+        .abouttext p{
+        font-size: 14px;
+    }
     #scroll {
         margin-right: 10px;
     }
     .copyright p{
         padding: 20px 40px;
         margin: 0 20px;
-    }
-    .abouttext{
-        width: 100%;
     }
 }
     @media screen and (max-width:376px)
